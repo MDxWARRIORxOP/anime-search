@@ -1,7 +1,8 @@
-### <h1>anime-search</h1>
+# <h1>Anime Search Engine</h1>
 
-<b>anime search engine</b> thats currently in dev.
+<b>An Anime Search Engine</b> thats currently in dev.
+Uses <a href="zoro.to">zoro</a> to find anime.
 
-### <h1>Contributing</h1>
+## <h2>Contributing</h2>
 
-we are going to need help, so if you find anything wrong in the code, please [open a pull request](https://github.com/UFO-Studios/anime-search/pulls) :D
+If you have a suggestion then please [open a pull request](https://github.com/UFO-Studios/anime-search/pulls) or If you found a bug, Please [open an Issue](https://github.com/UFO-Studios/anime-search/issues)
