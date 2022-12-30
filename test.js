@@ -1,11 +1,14 @@
 const { getAnimeFromZoro, getAnimeFromFreak, getAnime } = require("./lib");
-// or esm
 
-getAnimeFromZoro("naruto").then(console.log);
+getAnime("naruto").then(console.log);
 
-// or
+// or if you want to be platform specific
 
-getAnimeFromFreak("naruto").then(console.log);
+getAnimeFromZoro("sword art online").then(console.log);
+
+// and
+
+getAnimeFromFreak("dragon slayer").then(console.log);
 
 /*
 {
@@ -15,7 +18,7 @@ getAnimeFromFreak("naruto").then(console.log);
 }
 */
 
-getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
+getAnime("BDHUYUhNXUCHABCYGYGRC").then(console.log);
 
 /*
 { code: 404, message: "Couldn't find the specified Anime" }
@@ -23,11 +26,11 @@ getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
 
 // async example
 (async () => {
-  const data = await getAnimeFromZoro("Hunter x Hunter");
+  const data = await getAnime("Hunter x Hunter");
   console.log(data);
 })();
 
 // time
 console.time("timer");
-getAnimeFromZoro("One Piece").then(console.log);
+getAnime("One Piece").then(console.log);
 console.timeEnd("timer");

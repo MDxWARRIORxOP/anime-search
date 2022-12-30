@@ -22,11 +22,25 @@ Install anime-seach with any package manager for node.
 ## Usage/Examples
 
 ```javascript
-const { getAnimeFromZoro } = require("anime-search");
-// or esm
-import { getAnimeFromZoro } from "anime-search";
+const {
+  getAnimeFromZoro,
+  getAnimeFromFreak,
+  getAnime,
+} = require("anime-search");
 
-getAnimeFromZoro("naruto").then(console.log);
+// or esm
+
+import { getAnimeFromZoro, getAnimeFromFreak, getAnime } from "anime-search";
+
+getAnime("naruto").then(console.log);
+
+// or if you want to be platform specific
+
+getAnimeFromZoro("sword art online").then(console.log);
+
+// and
+
+getAnimeFromFreak("dragon slayer").then(console.log);
 
 /*
 {
@@ -36,7 +50,7 @@ getAnimeFromZoro("naruto").then(console.log);
 }
 */
 
-getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
+getAnime("BDHUYUhNXUCHABCYGYGRC").then(console.log);
 
 /*
 { code: 404, message: "Couldn't find the specified Anime" }
@@ -44,19 +58,29 @@ getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
 
 // async example
 (async () => {
-  const data = await getAnimeFromZoro("Hunter x Hunter");
+  const data = await getAnime("Hunter x Hunter");
   console.log(data);
 })();
 
 // time
 console.time("timer");
-getAnimeFromZoro("One Piece").then(console.log);
+getAnime("One Piece").then(console.log);
 console.timeEnd("timer");
 ```
 
 ## API Reference
 
-#### Get anime from zoro
+#### Get anime
+
+```js
+getAnime();
+```
+
+| Parameter   | Type     | Description                        |
+| :---------- | :------- | :--------------------------------- |
+| `animeName` | `string` | **Required**. Anime name to search |
+
+#### Get anime from Zoro
 
 ```js
 getAnimeFromZoro();
@@ -66,11 +90,19 @@ getAnimeFromZoro();
 | :---------- | :------- | :--------------------------------- |
 | `animeName` | `string` | **Required**. Anime name to search |
 
+#### Get anime from Anime Freak
+
+```js
+getAnimeFromFreak();
+```
+
+| Parameter   | Type     | Description                        |
+| :---------- | :------- | :--------------------------------- |
+| `animeName` | `string` | **Required**. Anime name to search |
+
 ## Future Plans
 
-- Add a thumbnail option.
-
-- Support more websites.
+- add a function to give all info about a anime
 
 ## Authors
 
