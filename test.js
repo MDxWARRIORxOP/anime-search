@@ -7,7 +7,4 @@ getAnimeFromZoro("naruto").then((data) => console.log(data));
 getAnimeFromZoro("sword art online").then((data) => console.log(data));
 
 // One Piece
-getAnimeFromZoro("One Piece").then(data => console.log(data))
-
-// Mojeku
-getAnimeFromZoro("mojeku").then(data => console.log(data))
+getAnimeFromZoro("One Piece").then((data) => console.log(data));
