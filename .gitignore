@@ -3,3 +3,5 @@ yarn.lock
 yarn-error.log
 .*
 !.gitignore
+!.editorconfig
+!.yarnrc.yml
