@@ -25,7 +25,7 @@
     "search"
   ],
   "author": "MDxWARRIORxOP <mohammedsiddiqui2009@gmail.com>",
-  "license": "BSD 3-Clause License",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/MDxWARRIORxOP/anime-search/issues"
   },
@@ -40,5 +40,6 @@
       "require": "./lib/index.js",
       "import": "./lib/esm/index.js"
     }
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }
