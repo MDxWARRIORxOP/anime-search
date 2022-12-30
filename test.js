@@ -1,7 +1,11 @@
-const { getAnimeFromZoro } = require("anime-search");
+const { getAnimeFromZoro, getAnimeFromFreak, getAnime } = require("./lib");
 // or esm
 
 getAnimeFromZoro("naruto").then(console.log);
+
+// or
+
+getAnimeFromFreak("naruto").then(console.log);
 
 /*
 {
