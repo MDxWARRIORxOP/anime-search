@@ -1,7 +1,4 @@
 node_modules/
 yarn.lock
 yarn-error.log
-.*
-!.gitignore
-!.editorconfig
-!.yarnrc.yml
+.vscode/

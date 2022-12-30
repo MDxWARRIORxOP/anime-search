@@ -1,6 +1,6 @@
 # Anime-Search
 
-An anime search engine that uses [zoro](https://zoro.to) to find animes.
+An anime search engine that uses various sites to find anime.
 
 ## Features
 
