@@ -1,16 +1,21 @@
-const { getAnimeFromZoro } = require("./lib/index.js");
+const { getAnimeFromZoro } = require("anime-search");
+// or esm
 
-// naruto
 getAnimeFromZoro("naruto").then(console.log);
 
-// SAO
-getAnimeFromZoro("sword art online").then(console.log);
+/*
+{
+  name: 'Naruto',
+  url: 'https://zoro.to/naruto-677?ref=search',
+  code: 200
+}
+*/
 
-// One Piece
-getAnimeFromZoro("One Piece").then(console.log);
-
-// 404 error
 getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
+
+/*
+{ code: 404, message: "Couldn't find the specified Anime" }
+*/
 
 // async example
 (async () => {
@@ -20,5 +25,5 @@ getAnimeFromZoro("BDHUYUhNXUCHABCYGYGRC").then(console.log);
 
 // time
 console.time("timer");
-getAnimeFromZoro("Naruto: Shippuden").then(console.log);
+getAnimeFromZoro("One Piece").then(console.log);
 console.timeEnd("timer");
