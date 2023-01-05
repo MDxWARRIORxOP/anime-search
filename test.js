@@ -1,28 +1,13 @@
-const { getAnimeFromZoro, getAnimeFromFreak, getAnime } = require("./lib");
+const { getAnime } = require("anime-search");
 
 getAnime("naruto").then(console.log);
 
 // or if you want to be platform specific
+const { getAnimeFromZoro, getAnimeFromFreak } = require("anime-search");
 
 getAnimeFromZoro("sword art online").then(console.log);
 
-// and
-
 getAnimeFromFreak("dragon slayer").then(console.log);
-
-/*
-{
-  name: 'Naruto',
-  url: 'https://zoro.to/naruto-677?ref=search',
-  code: 200
-}
-*/
-
-getAnime("BDHUYUhNXUCHABCYGYGRC").then(console.log);
-
-/*
-{ code: 404, message: "Couldn't find the specified Anime" }
-*/
 
 // async example
 (async () => {
@@ -30,7 +15,6 @@ getAnime("BDHUYUhNXUCHABCYGYGRC").then(console.log);
   console.log(data);
 })();
 
-// time
+// timed
 console.time("timer");
-getAnime("One Piece").then(console.log);
-console.timeEnd("timer");
+getAnime("One Piece").then(console.timeEnd("timer"));

@@ -17,24 +17,30 @@ Install anime-seach with any package manager for node.
   npm install anime-search
   # or yarn
   yarn add anime-search
+
+  # get the latest un-published version
+  npm i https://github.com/MDxWARRIORxOP/anime-seach.git
+  # or yarn
+  yarn add https://github.com/MDxWARRIORxOP/anime-seach.git
 ```
 
 ## Usage/Examples
 
 ```javascript
-const {
-  getAnimeFromZoro,
-  getAnimeFromFreak,
-  getAnime,
-} = require("anime-search");
+const getAnime = require("anime-search");
 
 // or esm
 
-import { getAnimeFromZoro, getAnimeFromFreak, getAnime } from "anime-search";
+import getAnime from "anime-search";
 
 getAnime("naruto").then(console.log);
 
 // or if you want to be platform specific
+const { getAnimeFromZoro, getAnimeFromFreak } = require("anime-search");
+
+// or esm
+
+import { getAnimeFromZoro, getAnimeFromFreak } from "anime-seach";
 
 getAnimeFromZoro("sword art online").then(console.log);
 
@@ -42,30 +48,15 @@ getAnimeFromZoro("sword art online").then(console.log);
 
 getAnimeFromFreak("dragon slayer").then(console.log);
 
-/*
-{
-  name: 'Naruto',
-  url: 'https://zoro.to/naruto-677?ref=search',
-  code: 200
-}
-*/
-
-getAnime("BDHUYUhNXUCHABCYGYGRC").then(console.log);
-
-/*
-{ code: 404, message: "Couldn't find the specified Anime" }
-*/
-
 // async example
 (async () => {
   const data = await getAnime("Hunter x Hunter");
   console.log(data);
 })();
 
-// time
+// timed
 console.time("timer");
-getAnime("One Piece").then(console.log);
-console.timeEnd("timer");
+getAnime("One Piece").then(console.timeEnd("timer"));
 ```
 
 ## API Reference
