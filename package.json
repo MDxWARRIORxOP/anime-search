@@ -35,12 +35,6 @@
     "url": "https://github.com/MDxWARRIORxOP/anime-search/issues"
   },
   "homepage": "https://github.com/MDxWARRIORxOP/anime-search#readme",
-  "exports": {
-    ".": {
-      "require": "./lib/index.js",
-      "import": "./lib/esm/index.js"
-    }
-  },
   "type": "module",
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
