@@ -1,4 +1,4 @@
-const { getAnime } = require("anime-search");
+const { getAnime } = require("./lib");
 
 getAnime("naruto").then(console.log);
 
