@@ -1,9 +1,0 @@
-src/
-node_modules/
-.editorconfig
-.gitignore
-test.js
-tsconfig.json
-.vscode/
-.prettierrc
-tslint.json

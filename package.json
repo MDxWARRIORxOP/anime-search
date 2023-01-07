@@ -15,10 +15,10 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format"
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint",
+    "preversion": "echo \"import { nameLike, Res, NotFound } from \"./types\";\ndeclare function animeSearch (animeName: nameLike): Promise<Res | NotFound>\ndeclare function getAnimeFromZoro (animeName: nameLike): Promise<Res | NotFound>\ndeclare function getAnimeFromFreak (animeName: nameLike): Promise<Res | NotFound>\" >> lib/index.d.ts",
+    "version": "yarn format"
   },
   "repository": {
     "type": "git",

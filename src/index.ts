@@ -1,14 +1,24 @@
 #!/usr/bin/env node
 import { load } from "cheerio";
 import { closestMatch } from "closest-match";
-import type { nameLike, Res, NotFound } from "./types";
 
-/**
- *
- * @param {animeSearch.nameLike} animeName anime to search for
- * @returns {animeSearch.Res} info about the anime
- */
-async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
+export type nameLike = string | (() => string);
+export type platforms = "https://zoro.to" | "https://animefreak.site";
+
+export interface Res {
+  name: string;
+  code: number;
+  thumbnail: string;
+  url: string;
+  platform: platforms;
+}
+
+export interface NotFound {
+  code: number;
+  message: string;
+}
+
+export async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://zoro.to/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -45,7 +55,7 @@ async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
-async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
+export async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://animefreak.site/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -82,7 +92,7 @@ async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
-async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
+export default async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
 
   const anime = await getAnimeFromZoro(name);
@@ -99,9 +109,3 @@ async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
 
   return anime;
 }
-
-module.exports = {
-  animeSearch,
-  getAnimeFromZoro,
-  getAnimeFromFreak,
-};
