@@ -1,6 +1,6 @@
 {
   "name": "anime-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An anime search engine that uses zoro to find anime.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
