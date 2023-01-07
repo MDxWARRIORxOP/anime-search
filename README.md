@@ -4,10 +4,21 @@ An anime search engine that uses various sites to find anime.
 
 ## Features
 
-- Fast.
-- Tiny.
-- Instant.
-- Javascript.
+- ### Fast.
+
+#### Scrapes in under 2 seconds.
+
+- ### Tiny.
+
+#### 14KB unpacked.
+
+- ### Open Source.
+
+#### Checkout the repo @ https://github.com/MDxWARRIORxOP/anime-search
+
+- ## Free.
+
+#### No charges applied. No API keys required.
 
 ## Installation
 
@@ -17,29 +28,20 @@ Install anime-seach with any package manager for node.
   npm install anime-search
   # or yarn
   yarn add anime-search
-
-  # get the latest un-published version
-  npm i https://github.com/MDxWARRIORxOP/anime-seach.git
-  # or yarn
-  yarn add https://github.com/MDxWARRIORxOP/anime-seach.git
 ```
 
 ## Usage/Examples
 
 ```javascript
-const getAnime = require("anime-search");
-
+const animeSearch = require("anime-search");
 // or esm
+import animeSearch from "anime-search";
 
-import getAnime from "anime-search";
-
-getAnime("naruto").then(console.log);
+animeSearch("naruto").then(console.log);
 
 // or if you want to be platform specific
 const { getAnimeFromZoro, getAnimeFromFreak } = require("anime-search");
-
 // or esm
-
 import { getAnimeFromZoro, getAnimeFromFreak } from "anime-seach";
 
 getAnimeFromZoro("sword art online").then(console.log);
@@ -50,13 +52,9 @@ getAnimeFromFreak("dragon slayer").then(console.log);
 
 // async example
 (async () => {
-  const data = await getAnime("Hunter x Hunter");
+  const data = await animeSearch("Hunter x Hunter");
   console.log(data);
 })();
-
-// timed
-console.time("timer");
-getAnime("One Piece").then(console.timeEnd("timer"));
 ```
 
 ## API Reference
@@ -67,9 +65,14 @@ getAnime("One Piece").then(console.timeEnd("timer"));
 getAnime();
 ```
 
-| Parameter   | Type     | Description                        |
-| :---------- | :------- | :--------------------------------- |
-| `animeName` | `string` | **Required**. Anime name to search |
+| Parameter     | Type       | Description                        |
+| :------------ | :--------- | :--------------------------------- |
+| `animeSearch` | `nameLike` | **Required**. Anime name to search |
+
+| Returns    | Type       | Description                                                |
+| :--------- | :--------- | :--------------------------------------------------------- |
+| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
+| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
 
 #### Get anime from Zoro
 
@@ -77,9 +80,14 @@ getAnime();
 getAnimeFromZoro();
 ```
 
-| Parameter   | Type     | Description                        |
-| :---------- | :------- | :--------------------------------- |
-| `animeName` | `string` | **Required**. Anime name to search |
+| Parameter   | Type       | Description                        |
+| :---------- | :--------- | :--------------------------------- |
+| `animeName` | `nameLike` | **Required**. Anime name to search |
+
+| Returns    | Type       | Description                                                |
+| :--------- | :--------- | :--------------------------------------------------------- |
+| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
+| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
 
 #### Get anime from Anime Freak
 
@@ -87,13 +95,14 @@ getAnimeFromZoro();
 getAnimeFromFreak();
 ```
 
-| Parameter   | Type     | Description                        |
-| :---------- | :------- | :--------------------------------- |
-| `animeName` | `string` | **Required**. Anime name to search |
+| Parameter   | Type       | Description                        |
+| :---------- | :--------- | :--------------------------------- |
+| `animeName` | `nameLike` | **Required**. Anime name to search |
 
-## Future Plans
-
-- add a function to give all info about a anime
+| Returns    | Type       | Description                                                |
+| :--------- | :--------- | :--------------------------------------------------------- |
+| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
+| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
 
 ## Authors
 
