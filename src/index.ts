@@ -3,10 +3,10 @@ import { load } from "cheerio";
 import { closestMatch } from "closest-match";
 import fetch from "node-fetch";
 
- type nameLike = string | (() => string);
- type platforms = "https://zoro.to" | "https://animefreak.site" | "https://animedao.to/";
+type nameLike = string | (() => string);
+type platforms = "https://zoro.to" | "https://animefreak.site" | "https://animedao.to/";
 
- interface Res {
+interface Res {
   name: string;
   code: number;
   thumbnail: string;
@@ -14,12 +14,12 @@ import fetch from "node-fetch";
   platform: platforms;
 }
 
- interface NotFound {
+interface NotFound {
   code: number;
   message: string;
 }
 
- async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
+async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://zoro.to/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -33,7 +33,7 @@ import fetch from "node-fetch";
         .each((_inde, element) => {
           let thumbnailUrl: string;
 
-          for (const child of element.parent.children) {
+          for (const child of element.parent!.children) {
             if (child.type === "tag" && child.name === "img") {
               thumbnailUrl = child.attribs["data-src"];
             }
@@ -42,7 +42,7 @@ import fetch from "node-fetch";
           array.push({
             name: element.attribs["title"],
             url: "https://zoro.to" + element.attribs["href"],
-            thumbnail: thumbnailUrl,
+            thumbnail: thumbnailUrl!,
             code: 200,
             platform: "https://zoro.to",
           });
@@ -56,7 +56,7 @@ import fetch from "node-fetch";
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
- async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
+async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://animefreak.site/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -70,7 +70,7 @@ import fetch from "node-fetch";
         .each((_inde, element) => {
           let thumbnailUrl;
 
-          for (const child of element.parent.children) {
+          for (const child of element.parent!.children) {
             if (child.type === "tag" && child.name === "img") {
               thumbnailUrl = child.attribs["data-src"];
             }
@@ -93,7 +93,7 @@ import fetch from "node-fetch";
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
-  async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
+async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
 
   const anime = await getAnimeFromZoro(name);
@@ -111,5 +111,5 @@ import fetch from "node-fetch";
   return anime;
 }
 
-export default animeSearch
-export { getAnimeFromFreak, getAnimeFromZoro, Res, nameLike, NotFound,  platforms}
+export default animeSearch;
+export { getAnimeFromFreak, getAnimeFromZoro, Res, nameLike, NotFound, platforms };
