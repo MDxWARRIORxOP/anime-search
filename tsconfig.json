@@ -6,8 +6,10 @@
         "preserveConstEnums": true,
         "outDir": "lib",
         "declaration": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+
+        
       },
-    "include": ["src/**/*.ts", "lib/index.d.ts"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"]
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { load } from "cheerio";
 import { closestMatch } from "closest-match";
+import fetch from "node-fetch";
 
 export type nameLike = string | (() => string);
 export type platforms = "https://zoro.to" | "https://animefreak.site";
@@ -24,13 +25,13 @@ export async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFo
   const $ = load(data);
   const array: Res[] = [];
 
-  await $("#main-content > section > div.tab-content > div > div.film_list-wrap")
+  $("#main-content > section > div.tab-content > div > div.film_list-wrap")
     .find(".flw-item")
-    .each((index, elem) => {
+    .each((_index, elem) => {
       $(elem)
         .find("a")
-        .each((inde, element) => {
-          let thumbnailUrl;
+        .each((_inde, element) => {
+          let thumbnailUrl: string;
 
           for (const child of element.parent.children) {
             if (child.type === "tag" && child.name === "img") {
@@ -39,8 +40,8 @@ export async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFo
           }
 
           array.push({
-            name: element.attribs.title,
-            url: "https://zoro.to" + element.attribs.href,
+            name: element.attribs["title"],
+            url: "https://zoro.to" + element.attribs["href"],
             thumbnail: thumbnailUrl,
             code: 200,
             platform: "https://zoro.to",
@@ -48,8 +49,8 @@ export async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFo
         });
     });
 
-  const nameArray = await array.map((element) => element.name);
-  const closest = await closestMatch(name, nameArray);
+  const nameArray = array.map((element) => element.name);
+  const closest = closestMatch(name, nameArray);
   const e = array.map((element) => (element.name === closest ? element : false));
   const finalArray = e.filter((el) => el);
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
@@ -61,12 +62,12 @@ export async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotF
   const $ = load(data);
   const array: Res[] = [];
 
-  await $("#main-content > section > div.tab-content > div > div.film_list-wrap")
+  $("#main-content > section > div.tab-content > div > div.film_list-wrap")
     .find(".flw-item")
-    .each((index, elem) => {
+    .each((_index, elem) => {
       $(elem)
         .find("a")
-        .each((inde, element) => {
+        .each((_inde, element) => {
           let thumbnailUrl;
 
           for (const child of element.parent.children) {
@@ -76,8 +77,8 @@ export async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotF
           }
 
           array.push({
-            name: element.attribs.title,
-            url: "https://animefreak.site" + element.attribs.href,
+            name: element.attribs["title"],
+            url: "https://animefreak.site" + element.attribs["href"],
             thumbnail: thumbnailUrl,
             code: 200,
             platform: "https://animefreak.site",
@@ -85,8 +86,8 @@ export async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotF
         });
     });
 
-  const nameArray = await array.map((element) => element.name);
-  const closest = await closestMatch(name, nameArray);
+  const nameArray = array.map((element) => element.name);
+  const closest = closestMatch(name, nameArray);
   const e = array.map((element) => (element.name === closest ? element : false));
   const finalArray = e.filter((el) => el);
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
