@@ -1,6 +1,6 @@
 {
   "name": "anime-search",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "An anime search engine that scrapes data from famous anime sites to find your favorite anime.",
   "main": "lib/index.js",
   "types": "lib/types.d.ts",
