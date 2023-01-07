@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "An anime search engine that scrapes data from famous anime sites to find your favorite anime.",
   "main": "lib/index.js",
-  "types": "lib/types.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],

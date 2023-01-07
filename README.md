@@ -10,7 +10,7 @@ An anime search engine that uses various sites to find anime.
 
 - ### Tiny.
 
-#### 14KB unpacked.
+#### 9KB unpacked.
 
 - ### Open Source.
 
