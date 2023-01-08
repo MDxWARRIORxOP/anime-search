@@ -45,9 +45,7 @@ const { getAnimeFromZoro, getAnimeFromFreak } = require("anime-search");
 import { getAnimeFromZoro, getAnimeFromFreak } from "anime-seach";
 
 getAnimeFromZoro("sword art online").then(console.log);
-
 // and
-
 getAnimeFromFreak("dragon slayer").then(console.log);
 
 // async example
