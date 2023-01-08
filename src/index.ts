@@ -3,15 +3,15 @@ import { load } from "cheerio";
 import { closestMatch } from "closest-match";
 import fetch from "node-fetch";
 
-type nameLike = string | (() => string);
-type platforms = "https://zoro.to" | "https://animefreak.site" | "https://animedao.to/";
+type NameLike = string | (() => string);
+type Platforms = "https://zoro.to" | "https://animefreak.site" | "https://animedao.to/";
 
 interface Res {
   name: string;
   code: number;
   thumbnail: string;
   url: string;
-  platform: platforms;
+  platform: Platforms;
 }
 
 interface NotFound {
@@ -19,7 +19,7 @@ interface NotFound {
   message: string;
 }
 
-async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
+async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://zoro.to/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -56,7 +56,7 @@ async function getAnimeFromZoro(animeName: nameLike): Promise<Res | NotFound> {
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
-async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
+async function getAnimeFromFreak(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
   const data = await fetch(`https://animefreak.site/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
@@ -93,7 +93,7 @@ async function getAnimeFromFreak(animeName: nameLike): Promise<Res | NotFound> {
   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 }
 
-async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
+async function animeSearch(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
 
   const anime = await getAnimeFromZoro(name);
@@ -112,4 +112,4 @@ async function animeSearch(animeName: nameLike): Promise<Res | NotFound> {
 }
 
 export default animeSearch;
-export { getAnimeFromFreak, getAnimeFromZoro, Res, nameLike, NotFound, platforms };
+export { getAnimeFromFreak, getAnimeFromZoro, Res, NameLike, NotFound, Platforms };
