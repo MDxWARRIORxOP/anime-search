@@ -6,7 +6,7 @@ An anime search engine that uses various sites to find anime.
 
 - ### Fast.
 
-#### Scrapes in under 2 seconds.
+#### Scrapes in under 300 milliseconds.
 
 - ### Tiny.
 

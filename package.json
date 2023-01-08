@@ -36,17 +36,17 @@
   },
   "homepage": "https://github.com/MDxWARRIORxOP/anime-search#readme",
   "type": "module",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
-    "closest-match": "^1.3.3",
-    "node-fetch": "^3.3.0"
-  },
   "exports": {
     "default": "./lib/esm/index.js",
     "import": "./lib/esm/index.js",
     "require": "./lib/index.js"
   },
   "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "closest-match": "^1.3.3",
+    "node-fetch": "^3.3.0"
+  },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "prettier": "^2.8.1",
