@@ -42,9 +42,9 @@
     "node-fetch": "^3.3.0"
   },
   "exports": {
-    "default": "lib/esm/index.js",
-    "import": "lib/esm/index.js",
-    "require": "lib/index.js"
+    "default": "./lib/esm/index.js",
+    "import": "./lib/esm/index.js",
+    "require": "./lib/index.js"
   },
   "packageManager": "yarn@3.3.1",
   "devDependencies": {
