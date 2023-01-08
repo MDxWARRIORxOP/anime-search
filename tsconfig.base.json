@@ -3,7 +3,6 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": true,
         "allowJs": true,
         "declaration": true,
         "esModuleInterop": true,
