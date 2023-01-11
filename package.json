@@ -1,6 +1,6 @@
 {
   "name": "anime-search",
-  "version": "2.0.1-test5",
+  "version": "2.0.1-test6",
   "description": "An anime search engine that scrapes data from famous anime sites to find your favorite anime.",
   "maintainers": [
     "MDxWARRIORxOP <mohammedsiddiqui2009@gmail.com>"
@@ -46,7 +46,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "closest-match": "^1.3.3",
-    "dynamodb-onetable": "^2.5.1",
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
