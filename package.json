@@ -35,7 +35,7 @@
     "url": "https://github.com/MDxWARRIORxOP/anime-search/issues"
   },
   "homepage": "https://github.com/MDxWARRIORxOP/anime-search#readme",
-  "type": "module",
+  "type": "commonjs",
   "exports": {
     "default": "./lib/esm/index.js",
     "import": "./lib/esm/index.js",
