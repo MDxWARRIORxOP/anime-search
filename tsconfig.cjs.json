@@ -2,9 +2,8 @@
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
         "module": "CommonJS",
-        "outDir": "lib",
+        "outDir": "lib/cjs",
+        "target": "ES2015",
         "declarationDir": "lib/types"
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
 }
