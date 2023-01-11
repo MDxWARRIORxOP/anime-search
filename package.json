@@ -1,21 +1,15 @@
 {
   "name": "anime-search",
-  "version": "2.0.1-test3",
+  "version": "2.0.1-test5",
   "description": "An anime search engine that scrapes data from famous anime sites to find your favorite anime.",
-  "main": "lib/index.js",
-  "types": "lib/types/index.d.ts",
-  "module": "lib/esm/index.js",
-  "files": [
-    "lib"
-  ],
   "maintainers": [
     "MDxWARRIORxOP <mohammedsiddiqui2009@gmail.com>"
   ],
   "scripts": {
     "test": "node test.js",
-    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+    "build": "bash ./build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.esm.json",
+    "lint": "tslint -p tsconfig.mjs.json",
     "prepare": "yarn build",
     "prepublishOnly": "yarn lint",
     "version": "yarn format"
@@ -36,16 +30,23 @@
     "url": "https://github.com/MDxWARRIORxOP/anime-search/issues"
   },
   "homepage": "https://github.com/MDxWARRIORxOP/anime-search#readme",
-  "type": "commonjs",
+  "main": "lib/cjs/index.js",
+  "types": "lib/types/index.d.ts",
+  "module": "lib/mjs/index.js",
+  "files": [
+    "lib"
+  ],
   "exports": {
-    "default": "./lib/esm/index.js",
-    "import": "./lib/esm/index.js",
-    "require": "./lib/index.js"
+    ".": {
+      "import": "./lib/mjs/index.js",
+      "require": "./lib/cjs/index.js"
+    }
   },
   "packageManager": "yarn@3.3.1",
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "closest-match": "^1.3.3",
+    "dynamodb-onetable": "^2.5.1",
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
