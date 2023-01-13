@@ -16,6 +16,9 @@ jobs:
         with:
           version: 10.x
       - run: yarn install
+      - run: yarn format
+      - run: yarn lint
+      - run: yarn test
       - run: make test-coverage-${{ matrix.test_number }}
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
