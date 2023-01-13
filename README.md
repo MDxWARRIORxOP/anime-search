@@ -32,7 +32,7 @@ Install anime-seach with any package manager for node.
 
 ## Documentation
 
-Check ou the docs @ https://somepage.com
+Check ou the docs @ https://mdxwarriorxop.github.io/anime-search/
 
 ## Usage/Examples
 
