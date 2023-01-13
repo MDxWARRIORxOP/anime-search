@@ -95,7 +95,6 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 // }
 
 async function animeSearch(animeName: NameLike): Promise<Res | NotFound> {
-
   return await getAnimeFromZoro(typeof animeName === "function" ? await animeName() : animeName);
 }
 
