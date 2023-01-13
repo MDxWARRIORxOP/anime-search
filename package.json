@@ -9,7 +9,8 @@
     "build": "bash ./build",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.mjs.json",
-    "prepublishOnly": "yarn build && yarn lint",
+    "prepublish": "yarn build",
+    "prepublishOnly": "yarn lint",
     "version": "yarn format",
     "test": "jest --coverage"
   },
