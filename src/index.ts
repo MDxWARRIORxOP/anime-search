@@ -19,6 +19,16 @@ interface NotFound {
   message: string;
 }
 
+/**
+ * @param animeName The name of the anime to find.  
+ * @returns Info about the scraped data.
+ * @example
+ * ```ts
+ * import { getAnimeFromZoro } from "anime-search";
+ * 
+ * getAnimeFromZoro("naruto").then(console.log)
+ * ```
+ */
 async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? await animeName() : animeName;
   const data = await fetch(`https://zoro.to/search?keyword=${name}`).then((res) => res.text());
@@ -94,6 +104,16 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 //   return !finalArray[0] ? { code: 404, message: "Couldn't find the specified Anime" } : finalArray[0];
 // }
 
+/**
+ * @param animeName The name of the anime to find.  
+ * @returns Info about the scraped data.
+ *  * @example
+ * ```ts
+ * import getAnime from "anime-search";
+ * 
+ * getAnime("naruto").then(console.log)
+ * ```
+ */
 async function animeSearch(animeName: NameLike): Promise<Res | NotFound> {
   return await getAnimeFromZoro(typeof animeName === "function" ? await animeName() : animeName);
 }

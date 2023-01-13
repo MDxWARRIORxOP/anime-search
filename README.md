@@ -30,6 +30,10 @@ Install anime-seach with any package manager for node.
   yarn add anime-search
 ```
 
+## Documentation
+
+Check ou the docs @ https://somepage.com
+
 ## Usage/Examples
 
 ```javascript
@@ -87,7 +91,7 @@ getAnimeFromZoro();
 | `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
 | `Response` | `notFound` | Includes a code and a message when the anime is not found. |
 
-#### Get anime from Anime Freak
+<!-- #### Get anime from Anime Freak
 
 ```js
 getAnimeFromFreak();
@@ -100,7 +104,7 @@ getAnimeFromFreak();
 | Returns    | Type       | Description                                                |
 | :--------- | :--------- | :--------------------------------------------------------- |
 | `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
-| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
+| `Response` | `notFound` | Includes a code and a message when the anime is not found. | -->
 
 ## Authors
 
