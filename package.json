@@ -12,8 +12,7 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn lint",
     "version": "yarn format",
-    "test": "jest --coverage",
-    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
