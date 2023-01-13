@@ -17,6 +17,7 @@
         "resolveJsonModule": true,
         "traceResolution": false,
       },
+      
       "compileOnSave": false,
       "exclude": ["node_modules", "dist"],
       "include": ["src"]
