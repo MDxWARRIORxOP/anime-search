@@ -20,12 +20,12 @@ interface NotFound {
 }
 
 /**
- * @param animeName The name of the anime to find.  
+ * @param animeName The name of the anime to find.
  * @returns Info about the scraped data.
  * @example
  * ```ts
  * import { getAnimeFromZoro } from "anime-search";
- * 
+ *
  * getAnimeFromZoro("naruto").then(console.log)
  * ```
  */
@@ -105,12 +105,12 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 // }
 
 /**
- * @param animeName The name of the anime to find.  
+ * @param animeName The name of the anime to find.
  * @returns Info about the scraped data.
  *  * @example
  * ```ts
  * import getAnime from "anime-search";
- * 
+ *
  * getAnime("naruto").then(console.log)
  * ```
  */
