@@ -1,3 +1,5 @@
+![anime search](https://cdn.discordapp.com/attachments/894260496725835776/1063899048588886207/AS_Logo.png)
+
 # Anime-Search
 
 An anime search engine that uses various sites to find anime.
@@ -106,9 +108,11 @@ getAnimeFromFreak();
 | `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
 | `Response` | `notFound` | Includes a code and a message when the anime is not found. | -->
 
-## Authors
+## Contributors
 
-- [@Kingerious\_](https://www.github.com/MDxWARRIORxOP)
+- [@Kingerious\_](https://www.github.com/MDxWARRIORxOP) - The API.
+
+- [@ViggoBF](https://twitter.com/viggo_bf) - The logo
 
 ## License
 
