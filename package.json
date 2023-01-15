@@ -12,7 +12,7 @@
     "test": "jest --coverage",
     "typedoc": "rm -rf docs && typedoc --entryPointStrategy expand src/ --out docs  --tsconfig tsconfig.mjs.json --plugin @mxssfd/typedoc-theme --theme my-theme --name Anime-Search Docs --readme README.md --plugin typedoc-plugin-extras --customTitle Anime-Search Docs --favicon https://cdn.discordapp.com/attachments/894260496725835776/1063899048588886207/AS_Logo.png --footerLastModified true --plugin typedoc-plugin-google-ads --googleAdsId 1852531786052566",
     "prepublish": "yarn build",
-    "prepublishOnly": "yarn lint",
+    "prepublishOnly": "yarn lint && yarn test",
     "version": "yarn format"
   },
   "repository": {
