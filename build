@@ -1,5 +1,5 @@
 rm -rf lib
-tsc -p tsconfig.mjs.json & tsc -p tsconfig.cjs.json
+tsc -p tsconfig.json & tsc -p tsconfig.cjs.json
 
 
 cat >lib/cjs/package.json <<!EOF

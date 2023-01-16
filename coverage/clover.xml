@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1673780542412" clover="3.2.0">
-  <project timestamp="1673780542412" name="All files">
+<coverage generated="1673895449232" clover="3.2.0">
+  <project timestamp="1673895449232" name="All files">
     <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8" elements="40" coveredelements="40" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="D:\Learning-Nodejs\anime-search\src\index.ts">
       <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
-      <line num="34" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="14" type="stmt"/>
       <line num="35" count="14" type="stmt"/>
       <line num="36" count="14" type="stmt"/>
-      <line num="37" count="14" type="stmt"/>
-      <line num="39" count="14" type="stmt"/>
-      <line num="42" count="305" type="stmt"/>
-      <line num="47" count="610" type="stmt"/>
-      <line num="48" count="3160" type="cond" truecount="3" falsecount="0"/>
-      <line num="49" count="305" type="stmt"/>
-      <line num="53" count="610" type="stmt"/>
-      <line num="63" count="610" type="stmt"/>
-      <line num="64" count="14" type="stmt"/>
-      <line num="65" count="610" type="cond" truecount="2" falsecount="0"/>
-      <line num="66" count="610" type="stmt"/>
-      <line num="67" count="14" type="cond" truecount="2" falsecount="0"/>
-      <line num="82" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="14" type="stmt"/>
+      <line num="41" count="305" type="stmt"/>
+      <line num="46" count="610" type="stmt"/>
+      <line num="47" count="3160" type="cond" truecount="3" falsecount="0"/>
+      <line num="48" count="305" type="stmt"/>
+      <line num="52" count="610" type="stmt"/>
+      <line num="62" count="610" type="stmt"/>
+      <line num="63" count="14" type="stmt"/>
+      <line num="64" count="610" type="cond" truecount="2" falsecount="0"/>
+      <line num="65" count="610" type="stmt"/>
+      <line num="66" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="81" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="84" count="1" type="stmt"/>
       <line num="85" count="1" type="stmt"/>
-      <line num="86" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
