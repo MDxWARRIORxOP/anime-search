@@ -61,58 +61,11 @@ getAnimeFromFreak("dragon slayer").then(console.log);
 })();
 ```
 
-## API Reference
-
-#### Get anime
-
-```js
-getAnime();
-```
-
-| Parameter     | Type       | Description                        |
-| :------------ | :--------- | :--------------------------------- |
-| `animeSearch` | `nameLike` | **Required**. Anime name to search |
-
-| Returns    | Type       | Description                                                |
-| :--------- | :--------- | :--------------------------------------------------------- |
-| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
-| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
-
-#### Get anime from Zoro
-
-```js
-getAnimeFromZoro();
-```
-
-| Parameter   | Type       | Description                        |
-| :---------- | :--------- | :--------------------------------- |
-| `animeName` | `nameLike` | **Required**. Anime name to search |
-
-| Returns    | Type       | Description                                                |
-| :--------- | :--------- | :--------------------------------------------------------- |
-| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
-| `Response` | `notFound` | Includes a code and a message when the anime is not found. |
-
-<!-- #### Get anime from Anime Freak
-
-```js
-getAnimeFromFreak();
-```
-
-| Parameter   | Type       | Description                        |
-| :---------- | :--------- | :--------------------------------- |
-| `animeName` | `nameLike` | **Required**. Anime name to search |
-
-| Returns    | Type       | Description                                                |
-| :--------- | :--------- | :--------------------------------------------------------- |
-| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
-| `Response` | `notFound` | Includes a code and a message when the anime is not found. | -->
-
 ## Contributors
 
 - [@Kingerious\_](https://www.github.com/MDxWARRIORxOP) - The API.
 
-- [@ViggoBF](https://twitter.com/viggo_bf) - The logo
+- [@ViggoBF](https://twitter.com/viggo_bf) - The logo.
 
 ## License
 

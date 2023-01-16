@@ -4,14 +4,13 @@ import { closestMatch } from "closest-match";
 import fetch from "node-fetch";
 
 type NameLike = string | (() => string);
-type Platforms = "https://zoro.to" | "https://animefreak.site" | "https://animedao.to/";
 
 interface Res {
   name: string;
   code: number;
   thumbnail: string;
   url: string;
-  platform: Platforms;
+  platform: "https://zoro.to";
 }
 
 interface NotFound {
@@ -21,14 +20,14 @@ interface NotFound {
 
 /**
  * @param animeName The name of the anime to find.
- * @returns Info about the scraped data.
+ * @returns Info about Anime.
  * @see https://zoro.to
+ * @async This is an async function. Use await/promise syntax accordingly. 
+ * @description Scrapes data from https://zoro.to and returns an object with the type of "Res"
  * @example
- * ```ts
  * import { getAnimeFromZoro } from "anime-search";
  *
  * getAnimeFromZoro("naruto").then(console.log)
- * ```
  */
 async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? await animeName() : animeName;
@@ -69,18 +68,18 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 
 /**
  * @param animeName The name of the anime to find.
- * @returns Info about the scraped data.
+ * @returns Info about Anime.
  * @see https://zoro.to
+ * @async This is an async function. Use await/promise syntax accordingly. 
+ * @description Scrapes data from https://zoro.to and returns an object with the type of "Res".
  *  @example
- * ```ts
  * import getAnime from "anime-search";
  *
  * getAnime("naruto").then(console.log)
- * ```
  */
 async function animeSearch(animeName: NameLike): Promise<Res | NotFound> {
   return await getAnimeFromZoro(typeof animeName === "function" ? await animeName() : animeName);
 }
 
 export default animeSearch;
-export { getAnimeFromZoro, Res, NameLike, NotFound, Platforms };
+export { getAnimeFromZoro, Res, NameLike, NotFound };

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Anime-Search</title><meta name="description" content="Documentation for Anime-Search"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><style>.container {
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Anime-Search-Docs</title><meta name="description" content="Documentation for Anime-Search-Docs"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><style>.container {
   padding: 0 2rem;
 }
 .tsd-page-toolbar {
@@ -94,7 +94,7 @@ code.tsd-tag {
 <div id="tsd-toolbar-links"></div></div>
 <ul class="results">
 <li class="state loading">Preparing search index...</li>
-<li class="state failure">The search index is not available</li></ul><a href="https://github.com/MDxWARRIORxOP/anime-search" class="title">Anime-Search</a>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Anime-Search-Docs</a>
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">Settings <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg></summary>
 <div class="tsd-accordion-details">
@@ -125,15 +125,13 @@ code.tsd-tag {
 <div>Res</div></a></li>
 <li class="tsd-kind-type-alias"><a href="types/NameLike.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg>
 <div>Name<wbr/>Like</div></a></li>
-<li class="tsd-kind-type-alias"><a href="types/Platforms.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>
-<div>Platforms</div></a></li>
-<li class="tsd-kind-function"><a href="functions/default.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>
-<div>default</div></a></li>
+<li class="tsd-kind-function"><a href="functions/animeSearch.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>
+<div>anime<wbr/>Search</div></a></li>
 <li class="tsd-kind-function"><a href="functions/getAnimeFromZoro.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>
 <div>get<wbr/>Anime<wbr/>From<wbr/>Zoro</div></a></li></ul></nav></div>
 <div class="col-content">
 <div class="tsd-page-title">
-<h2>Anime-Search</h2></div>
+<h2>Anime-Search-Docs</h2></div>
 <div class="tsd-panel tsd-typography"><p><img src="https://cdn.discordapp.com/attachments/894260496725835776/1063899048588886207/AS_Logo.png" alt="anime search"></p>
 
 <a href="#anime-search" id="anime-search" style="color: inherit; text-decoration: none;">
@@ -207,110 +205,13 @@ code.tsd-tag {
 <pre><code class="language-javascript"><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-4">animeSearch</span><span class="hl-0"> = </span><span class="hl-5">require</span><span class="hl-0">(</span><span class="hl-1">&quot;anime-search&quot;</span><span class="hl-0">);</span><br/><span class="hl-2">// or esm</span><br/><span class="hl-6">import</span><span class="hl-0"> </span><span class="hl-7">animeSearch</span><span class="hl-0"> </span><span class="hl-6">from</span><span class="hl-0"> </span><span class="hl-1">&quot;anime-search&quot;</span><span class="hl-0">;</span><br/><br/><span class="hl-5">animeSearch</span><span class="hl-0">(</span><span class="hl-1">&quot;naruto&quot;</span><span class="hl-0">).</span><span class="hl-5">then</span><span class="hl-0">(</span><span class="hl-7">console</span><span class="hl-0">.</span><span class="hl-7">log</span><span class="hl-0">);</span><br/><br/><span class="hl-2">// or if you want to be platform specific</span><br/><span class="hl-3">const</span><span class="hl-0"> { </span><span class="hl-4">getAnimeFromZoro</span><span class="hl-0">, </span><span class="hl-4">getAnimeFromFreak</span><span class="hl-0"> } = </span><span class="hl-5">require</span><span class="hl-0">(</span><span class="hl-1">&quot;anime-search&quot;</span><span class="hl-0">);</span><br/><span class="hl-2">// or esm</span><br/><span class="hl-6">import</span><span class="hl-0"> { </span><span class="hl-7">getAnimeFromZoro</span><span class="hl-0">, </span><span class="hl-7">getAnimeFromFreak</span><span class="hl-0"> } </span><span class="hl-6">from</span><span class="hl-0"> </span><span class="hl-1">&quot;anime-seach&quot;</span><span class="hl-0">;</span><br/><br/><span class="hl-5">getAnimeFromZoro</span><span class="hl-0">(</span><span class="hl-1">&quot;sword art online&quot;</span><span class="hl-0">).</span><span class="hl-5">then</span><span class="hl-0">(</span><span class="hl-7">console</span><span class="hl-0">.</span><span class="hl-7">log</span><span class="hl-0">);</span><br/><span class="hl-2">// and</span><br/><span class="hl-5">getAnimeFromFreak</span><span class="hl-0">(</span><span class="hl-1">&quot;dragon slayer&quot;</span><span class="hl-0">).</span><span class="hl-5">then</span><span class="hl-0">(</span><span class="hl-7">console</span><span class="hl-0">.</span><span class="hl-7">log</span><span class="hl-0">);</span><br/><br/><span class="hl-2">// async example</span><br/><span class="hl-0">(</span><span class="hl-3">async</span><span class="hl-0"> () </span><span class="hl-3">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-3">const</span><span class="hl-0"> </span><span class="hl-4">data</span><span class="hl-0"> = </span><span class="hl-6">await</span><span class="hl-0"> </span><span class="hl-5">animeSearch</span><span class="hl-0">(</span><span class="hl-1">&quot;Hunter x Hunter&quot;</span><span class="hl-0">);</span><br/><span class="hl-0">  </span><span class="hl-7">console</span><span class="hl-0">.</span><span class="hl-5">log</span><span class="hl-0">(</span><span class="hl-7">data</span><span class="hl-0">);</span><br/><span class="hl-0">})();</span>
 </code></pre>
 
-<a href="#api-reference" id="api-reference" style="color: inherit; text-decoration: none;">
-  <h2>API Reference</h2>
-</a>
-
-<a href="#get-anime" id="get-anime" style="color: inherit; text-decoration: none;">
-  <h4>Get anime</h4>
-</a>
-<pre><code class="language-js"><span class="hl-5">getAnime</span><span class="hl-0">();</span>
-</code></pre>
-<table>
-<thead>
-<tr>
-<th align="left">Parameter</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>animeSearch</code></td>
-<td align="left"><code>nameLike</code></td>
-<td align="left"><strong>Required</strong>. Anime name to search</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="left">Returns</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>Response</code></td>
-<td align="left"><code>Res</code></td>
-<td align="left">Includes the name, url, thumbnail and a code.</td>
-</tr>
-<tr>
-<td align="left"><code>Response</code></td>
-<td align="left"><code>notFound</code></td>
-<td align="left">Includes a code and a message when the anime is not found.</td>
-</tr>
-</tbody></table>
-
-<a href="#get-anime-from-zoro" id="get-anime-from-zoro" style="color: inherit; text-decoration: none;">
-  <h4>Get anime from Zoro</h4>
-</a>
-<pre><code class="language-js"><span class="hl-5">getAnimeFromZoro</span><span class="hl-0">();</span>
-</code></pre>
-<table>
-<thead>
-<tr>
-<th align="left">Parameter</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>animeName</code></td>
-<td align="left"><code>nameLike</code></td>
-<td align="left"><strong>Required</strong>. Anime name to search</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="left">Returns</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>Response</code></td>
-<td align="left"><code>Res</code></td>
-<td align="left">Includes the name, url, thumbnail and a code.</td>
-</tr>
-<tr>
-<td align="left"><code>Response</code></td>
-<td align="left"><code>notFound</code></td>
-<td align="left">Includes a code and a message when the anime is not found.</td>
-</tr>
-</tbody></table>
-<!-- #### Get anime from Anime Freak
-
-```js
-getAnimeFromFreak();
-```
-
-| Parameter   | Type       | Description                        |
-| :---------- | :--------- | :--------------------------------- |
-| `animeName` | `nameLike` | **Required**. Anime name to search |
-
-| Returns    | Type       | Description                                                |
-| :--------- | :--------- | :--------------------------------------------------------- |
-| `Response` | `Res`      | Includes the name, url, thumbnail and a code.              |
-| `Response` | `notFound` | Includes a code and a message when the anime is not found. | -->
-
-
 <a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
   <h2>Contributors</h2>
 </a>
 <ul>
 <li><p><a href="https://www.github.com/MDxWARRIORxOP">@Kingerious_</a> - The API.</p>
 </li>
-<li><p><a href="https://twitter.com/viggo_bf">@ViggoBF</a> - The logo</p>
+<li><p><a href="https://twitter.com/viggo_bf">@ViggoBF</a> - The logo.</p>
 </li>
 </ul>
 
@@ -326,4 +227,4 @@ getAnimeFromFreak();
 <p>Open a <a href="https://github.com/MDxWARRIORxOP/anime-search/pulls">pr</a> if you have a feature request.<br>Open an <a href="https://github.com/MDxWARRIORxOP/anime-search/issues">issue</a> if you encounter any bugs.</p>
 <p>Thanks!</p>
 </div></div></div>
-<div class="overlay"></div><script src="assets/main.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1852531786052566" crossOrigin="anonymous"></script></body></html>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>
