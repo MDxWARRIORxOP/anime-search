@@ -15,7 +15,7 @@ jobs:
       - node/install:
           install-yarn: true
           install-npm: false
-          node-version: "14"
+          node-version: "16.10.0"
       - node/with-cache:
           steps:
             - run: yarn install
@@ -26,6 +26,11 @@ jobs:
 
     steps:
       - checkout
+
+      - node/install:
+          install-yarn: true
+          install-npm: false
+          node-version: "16.10.0"
 
       - node/with-cache:
           steps:
