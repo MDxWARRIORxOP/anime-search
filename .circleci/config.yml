@@ -10,7 +10,7 @@ orbs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  test: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - node/test:
@@ -20,3 +20,24 @@ workflows:
           version: '16.10'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn
+          
+          
+  coveralls: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      test_coveralls:
+        executor:
+          name: node/default
+
+        steps:
+          - checkout
+
+          - node/with-cache:
+            steps:
+              - run: yarn install
+
+          - coveralls/upload:
+            parallel: true
+            flag_name: Test 1
+            verbose: true
+ 
