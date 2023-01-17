@@ -29,11 +29,22 @@ jobs:
           parallel: true
           flag_name: Test 1
           verbose: true
+  done:
+    executor:
+      name: node/default
+
+    steps:
+      - coveralls/upload:
+          parallel_finished: true
 
 workflows:
   coverage:
     jobs:
       - coveralls
+      - test
+      - done:
+          requires: [coveralls, test] 
+
         
   
  
