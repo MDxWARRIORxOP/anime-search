@@ -1,3 +1,17 @@
+[![Coverage Status](https://img.shields.io/coverallsCoverage/github/MDxWARRIORxOP/anime-search)](https://coveralls.io/github/MDxWARRIORxOP/anime-search?branch=main)
+
+[![Github Builds](https://img.shields.io/github/actions/workflow/status/MDxWARRIORxOP/anime-search/main.yml)](https://github.com/MDxWARRIORxOP/anime-search/actions/workflows/main.yml)
+
+![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/anime-search)
+
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/anime-search)
+
+![Downloads](https://img.shields.io/npm/dw/anime-search)
+
+[![Open Issues](https://img.shields.io/github/issues/MDxWARRIORxOP/anime-search)](https://github.com/MDxWARRIORxOP/anime-search/issues)
+
+[![License](https://img.shields.io/github/license/MDxWARRIORxOP/anime-search)](https://github.com/MDxWARRIORxOP/anime-search/blob/main/LICENSE)
+
 ![anime search](https://cdn.discordapp.com/attachments/894260496725835776/1063899048588886207/AS_Logo.png)
 
 # Anime-Search
