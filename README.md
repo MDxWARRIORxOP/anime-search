@@ -69,6 +69,7 @@ getAnimeFromFreak("dragon slayer").then(console.log);
 
 ## License
 
+We use the following license:  
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Contributing
