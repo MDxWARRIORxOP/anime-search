@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674046197577" clover="3.2.0">
-  <project timestamp="1674046197577" name="All files">
+<coverage generated="1674051730788" clover="3.2.0">
+  <project timestamp="1674051730788" name="All files">
     <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8" elements="40" coveredelements="40" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1"/>
     <file name="index.ts" path="D:\Learning-Nodejs\anime-search\src\index.ts">
       <metrics statements="21" coveredstatements="21" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="8"/>

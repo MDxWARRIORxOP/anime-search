@@ -4,8 +4,6 @@
 
 ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/anime-search)
 
-![Bundle Size](https://img.shields.io/bundlephobia/minzip/anime-search)
-
 ![Downloads](https://img.shields.io/npm/dw/anime-search)
 
 [![Open Issues](https://img.shields.io/github/issues/MDxWARRIORxOP/anime-search)](https://github.com/MDxWARRIORxOP/anime-search/issues)
