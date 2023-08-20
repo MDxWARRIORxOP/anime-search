@@ -10,7 +10,7 @@ interface Res {
   code: number;
   thumbnail: string;
   url: string;
-  platform: "https://zoro.to";
+  platform: "https://zoroto.tv";
 }
 
 interface NotFound {
@@ -21,9 +21,9 @@ interface NotFound {
 /**
  * @param animeName The name of the anime to find.
  * @returns Info about Anime.
- * @see https://zoro.to
+ * @see https://zoroto.tv
  * @async This is an async function. Use await/promise syntax accordingly.
- * @description Scrapes data from https://zoro.to and returns an object with the type of "Res"
+ * @description Scrapes data from https://zoroto.tv and returns an object with the type of "Res"
  * @example
  * import { getAnimeFromZoro } from "anime-search";
  *
@@ -31,7 +31,7 @@ interface NotFound {
  */
 async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
   const name = typeof animeName === "function" ? animeName() : animeName;
-  const data = await fetch(`https://zoro.to/search?keyword=${name}`).then((res) => res.text());
+  const data = await fetch(`https://zoroto.tv/search?keyword=${name}`).then((res) => res.text());
   const $ = load(data);
   const array: Res[] = [];
 
@@ -51,10 +51,10 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 
           array.push({
             name: element.attribs["title"],
-            url: "https://zoro.to" + element.attribs["href"],
+            url: "https://zoroto.tv" + element.attribs["href"],
             thumbnail: thumbnailUrl,
             code: 200,
-            platform: "https://zoro.to",
+            platform: "https://zoroto.tv",
           });
         });
     });
@@ -69,9 +69,9 @@ async function getAnimeFromZoro(animeName: NameLike): Promise<Res | NotFound> {
 /**
  * @param animeName The name of the anime to find.
  * @returns Info about Anime.
- * @see https://zoro.to
+ * @see https://zoroto.tv
  * @async This is an async function. Use await/promise syntax accordingly.
- * @description Scrapes data from https://zoro.to and returns an object with the type of "Res".
+ * @description Scrapes data from https://zoroto.tv and returns an object with the type of "Res".
  *  @example
  * import getAnime from "anime-search";
  *
